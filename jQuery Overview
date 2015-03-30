@@ -1,0 +1,972 @@
+HTML 5 : 
+
+HTML 5 semantic elements 
+	<section>
+	<article>
+	<aside>
+	<nav>
+	<header>
+	<footer>
+
+for all these elements : 
+display: block 
+
+These are all similar <div> tag.
+
+<div>: 
+	display: block 
+
+
+
+
+styles.css
+
+section,footer,header,nav,article,aside{
+	display:block;
+}
+
+=================================
+HTML 5 is not based on DTD:
+
+Use simple syntax for html 5 
+
+<!doctype html>
+
+
+You can use simple syntax for include UI culture : 
+
+<html lang="en-us">
+</html>
+
+full structure of html doc:
+
+<!doctype html>
+<html>
+	<head>
+		<title>page title</title>
+		<meta charset="utf-8"/> 
+		<meta name="author" content="Scott"/> 
+		<meta name="expires" content="06/10/2015"/> 
+		<meta name="keywords" content="asp,jsp,dynamic html,css,html5"/>
+		<meta name="description" content="site description"/>
+		
+
+		<meta name="viewport" content="width=device-width, initial-scale="1.0"/> 
+	
+		
+	<script>
+		//javascriipt goes here...
+	</script>
+
+
+	<style>
+	</style>
+
+
+	<link rel="stylesheet" href="filename.css"/>
+
+	
+	</head>
+	<body>
+	</body>
+
+</html>
+
+
+HTML elements for Body:
+
+To create struture of the page/layout of the page , we use <div> tag or we can use HTML 5 new semantic elements.
+
+<div>
+	to create container or block 
+<div> </div> 
+
+
+e.g.
+<!doctype html>
+<html>
+	<head>
+		<title>html5 page layout</title>
+		<meta charset="utf-8"/>	
+	</head>
+	<body>
+		<div id="wrapper">
+
+			<section id="header">
+				<header>
+			<h1>HTML 5 Layout</h1>
+				</header>
+			
+		<nav id="topmenu">
+			<ul>
+		<li><a href="#" title="home">home</a> <li>
+		<li><a href="#" title="home">home</a> <li>
+		<li><a href="#" title="home">home</a> <li>
+		<li><a href="#" title="home">home</a> <li>
+		
+			</ul>
+		</nav>
+
+
+			</section>
+
+			<section id="content">
+				<header>
+			<h3>main content goes here....
+				</header>
+			</section>
+
+			<section id="footer">
+
+			<footer>
+			&copy; Marlabs -2015
+			</footer>
+			</section>
+
+		</div>
+	</body>
+</html>
+
+
+============
+For CSS styles, we use two things:
+
+* CSS Selector 
+* CSS rule
+
+
+
+what is selector ? 
+The element/tag to which the css rule is applied.
+
+we got different selectors : 
+
+HTML element selector 
+	div, p, section, nav,ul, li, img, a , table, tr, td,th, form, input 
+
+div{
+}
+p{
+}
+
+img{
+}
+
+
+ID selector selector : 
+	You can prefix # for ID selecdtor 
+
+	e.g.
+#wrapper{
+}
+
+#content{
+}
+
+
+#topmenu{
+}
+
+
+
+Class Selector : 
+	You can prefix "." for class selector 
+
+e.g.
+.submenu
+{
+}
+
+
+.container{
+}
+
+.form-control
+{
+}
+
+
+
+How to set these styles to the elements: 
+<div id="wrapper">
+</div>
+
+
+<div class="container">
+</div>
+
+
+
+<nav>
+	<ul class="submenu">
+	</ul>
+</nav>
+
+
+
+Grouped Selector : 
+	we can set the same style for multiple elements 
+
+	we can "," for grouped selector 
+
+e.g.
+header,footer{
+	font-family:calibri;
+}
+
+
+
+contextual selector :
+e.g.
+b{
+}
+
+p b
+{
+}
+
+here, the style is applied to all  the child nodes,. 
+
+Instead, we need only for direct childs.
+
+
+we can usee ">" for that.
+
+e.g.
+#div1 b
+{
+}
+
+
+
+
+e.g.
+<div id="div1">
+	<b>header</b>
+
+		<div id="d2">
+			 <b>sub-header</b>
+		</div>
+</div>
+
+
+#div1 > b{
+}
+
+
+attribute selector : 
+
+a[href]{
+}
+
+
+
+<a title="">link text</a>
+<a href="" title="" >link </a>
+
+
+a[targert='_blank']{
+}
+
+
+input[type='text']
+{
+}
+
+
+img[src $='.jpg'] {
+}
+
+
+table tr:nth-child(5){
+}
+
+
+table tr:first-child{
+}
+
+table tr:last-child{
+}
+
+
+
+how to write css rules:
+selector 
+{
+	property:value;
+}
+
+
+
+=============================
+Example :
+<!doctype html>
+<html>
+	<head>
+		<title>html5 page layout</title>
+		<meta charset="utf-8"/>	
+        <style>
+            body {
+                background-image:url('Desert.jpg')
+            }
+
+
+            #wrapper {
+                    width:960px;
+                 
+
+                   border:1px solid blue;   
+                   border-radius:5px;
+                   -webkit-border-radius:5px;
+                   -moz-border-radius:5px;
+                   -o-border-radius:5px;
+
+                   padding:10px 10px ;
+                   margin:5px;
+            }
+
+
+            #header {
+                width:920px;
+                height:200px;
+
+
+                background-color:#fcc9c9;
+                
+                   border:1px solid grey;   
+                   border-radius:5px;
+                   -webkit-border-radius:5px;
+                   -moz-border-radius:5px;
+                   -o-border-radius:5px;
+
+                   padding:10px 10px ;
+                   margin:5px;
+            }
+
+
+            header {
+                text-align:center;
+                font-family:Calibri;
+                font-size:14px;
+            }
+
+
+            #topmene ul {
+                                float:right;
+                
+            }
+
+            #topmenu ul li {
+                display:inline;
+
+            }
+
+                #topmenu ul li a {
+                    text-decoration:none;
+                    font-family:Tahoma;
+                    font-weight:bold;
+                    
+                }
+
+                #topmenu ul li a:hover {
+                    text-decoration:underline;
+                    color:wheat;
+                    background-color:#c9e4ec;
+                }
+
+            #content {
+                width:940px;
+                background-color:white;
+                color:black;
+                min-height:500px;
+
+
+                 border:1px solid green;   
+                   border-radius:5px;
+                   -webkit-border-radius:5px;
+                   -moz-border-radius:5px;
+                   -o-border-radius:5px;
+
+                   padding:10px 10px ;
+                   margin:5px;
+
+            }
+
+
+            footer {
+
+                min-height:100px;
+                text-align:center;
+                font-weight:bold;
+                background-color:#9d8f9c;
+            }
+        </style>
+	</head>
+	<body>
+		<div id="wrapper">
+
+			<section id="header">
+				<header>
+			<h1>HTML 5 Layout</h1>
+				</header>
+			
+		<nav id="topmenu">
+			<ul>
+		<li><a href="#" title="home">home</a> <li>
+		<li><a href="#" title="home">home</a> <li>
+		<li><a href="#" title="home">home</a> <li>
+		<li><a href="#" title="home">home</a> <li>
+		
+			</ul>
+		</nav>
+
+
+			</section>
+
+			<section id="content">
+				<header>
+			<h3>main content goes here....</h3>
+				</header>
+			</section>
+
+			<section id="footer">
+
+			<footer>
+			&copy; Marlabs -2015
+			</footer>
+			</section>
+
+		</div>
+	</body>
+</html>
+
+
+
+
+
+=================================
+Let us talk about jQuery :
+
+
+jQuery  (Core funtionality) 
+
+jQuery UI  (UI related functionality : widgets)
+
+jQuery Mobile (Mobile web Apps)
+
+
+
+
+Why jQuery :
+
+	We can simplify the javascript code 
+	We can use predefined jQuery functions for all the javascript related functions 
+	We can simplify the DOM manipulation using jQuery selectors and jQuery DOM functions 
+
+	We can simplify the Event event handing in jQuery by using jQuery event functions and selector 
+
+
+	We can do animations using jQuery animation functions 
+
+
+	We can do dynamic CSS using jQuery .css() 
+
+
+	We can do ajax calls very easily by using jQuery ajax() function.
+
+
+
+
+
+Note:
+jQuery is a just javascript library (api).
+It is not a  framework .
+
+
+Framework : 
+	It includes builin functions as well as some Design pattern.(progaming style).
+	e.g. 
+		MVC
+		MVVM
+		
+e.g.
+	AngularJs
+	EmberJs
+	Backbone
+	
+========================
+jQuery.com
+	You can download jquery file and embed iin your doc 
+
+Syntax : -
+	$(selector).task();
+
+
+e.g.
+	$("p").hide();
+
+
+how to determine ,whether the page is loaded or not?
+$(document).ready(function(){
+
+	//logic goes here...
+});
+
+or
+
+$(function(){
+	//logic goes here....
+});
+
+
+OR 
+
+function init(){
+	//logie goes here...
+}
+
+$(documen).ready(init);
+OR
+$(init);
+
+
+You can even take multiple ready functions in jQuery
+
+<script>
+	$(function(){
+});
+
+
+	$(document).ready(function(){
+	});
+
+
+
+	function init(){
+		}
+
+
+		$(document).ready(init);
+
+</script>
+
+
+=====================
+How to create alias name for jQuery "$" sign.?
+This is used to avoid name conflict ,we can change the "$" to some other name.
+
+
+Syntax : --
+	<script>
+	jQuery.noConflict();
+	jQuery(document).ready(function(){
+		//you can use jQuery in place of "$" 
+		
+		jQuery("p").hide();
+	});
+	</script>
+
+	
+
+You can also give alias name instead of jQuery.
+
+syntax : 
+<script>
+	var jq=jQuery.noConflict();
+
+	jq(document).ready(function(){
+		//logic goes here...
+	});
+</script>
+
+================================
+
+jQuery animation functions:
+
+hide()
+show()
+fade()
+fadeIn()
+fadeOut()
+fadeTo()
+slide()
+slideUp()
+slideDown()
+toggle()
+slideToggle()
+
+syntax : -
+	$(selector).hide();
+	..
+
+For these functions, we take two optional parameters 
+	* speed --delay 
+	* callback -- what to perform after the animation is completed. 
+
+e.g.
+$("p").hide(1000,function(){
+	$("span1").show(1000);
+});
+
+Example:
+<!doctype html>
+<html>
+	<head>
+		<title>html5 page layout</title>
+		<meta charset="utf-8"/>	
+        <style>
+            body {
+                background-image:url('Desert.jpg')
+            }
+
+
+            #wrapper {
+                    width:960px;
+                 
+
+                   border:1px solid blue;   
+                   border-radius:5px;
+                   -webkit-border-radius:5px;
+                   -moz-border-radius:5px;
+                   -o-border-radius:5px;
+
+                   padding:10px 10px ;
+                   margin:5px;
+            }
+
+
+            #header {
+                width:920px;
+                height:200px;
+
+
+                background-color:#fcc9c9;
+                
+                   border:1px solid grey;   
+                   border-radius:5px;
+                   -webkit-border-radius:5px;
+                   -moz-border-radius:5px;
+                   -o-border-radius:5px;
+
+                   padding:10px 10px ;
+                   margin:5px;
+            }
+
+
+            header {
+                text-align:center;
+                font-family:Calibri;
+                font-size:14px;
+            }
+
+
+            #topmene ul {
+                                float:right;
+                
+            }
+
+            #topmenu ul li {
+                display:inline;
+
+            }
+
+                #topmenu ul li a {
+                    text-decoration:none;
+                    font-family:Tahoma;
+                    font-weight:bold;
+                    
+                }
+
+                #topmenu ul li a:hover {
+                    text-decoration:underline;
+                    color:wheat;
+                    background-color:#c9e4ec;
+                }
+
+            #content {
+                width:940px;
+                background-color:white;
+                color:black;
+                min-height:500px;
+
+
+                 border:1px solid green;   
+                   border-radius:5px;
+                   -webkit-border-radius:5px;
+                   -moz-border-radius:5px;
+                   -o-border-radius:5px;
+
+                   padding:10px 10px ;
+                   margin:5px;
+
+            }
+
+
+            footer {
+
+                min-height:100px;
+                text-align:center;
+                font-weight:bold;
+                background-color:#9d8f9c;
+            }
+        </style>
+
+        
+        <script src="jquery-2.1.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#CreatePanel").hide();
+
+                $("#registerlink").click(function () {
+
+                    $("#LoginPanel").slideUp(1000);
+                    $("#CreatePanel").slideDown(1000);
+                });
+
+
+                $("#loginlink").click(function () {
+                    $("#CreatePanel").slideUp(1000);
+                    $("#LoginPanel").slideDown(1000);
+                });
+            });
+        </script>
+	</head>
+	<body>
+		<div id="wrapper">
+
+			<section id="header">
+				<header>
+			<h1>HTML 5 Layout</h1>
+				</header>
+			
+		<nav id="topmenu">
+			<ul>
+		<li><a href="#" title="home">home</a> <li>
+		<li><a href="#" title="home">home</a> <li>
+		<li><a href="#" title="home">home</a> <li>
+		<li><a href="#" title="home">home</a> <li>
+		
+			</ul>
+		</nav>
+
+
+			</section>
+
+			<section id="content">
+				<header>
+			<h3>main content goes here....</h3>
+				</header>
+
+
+        <div id="LoginPanel">
+
+        <h3>Please Login here...</h3>
+            <p>
+                <label>Username</label>
+                <input type="text" id="txtuser" name="txtuser" />
+            </p>
+            <p>
+                <label>Password</label>
+                <input type="text" id="txtpassword" name="txtpassword" /> 
+            </p>
+            <p>
+                <button type="button">Submit</button>
+            </p>
+            <p>
+                If you not registered! Please <a href="#" id="registerlink">Register</a>
+            </p>
+        
+        
+        </div>
+
+
+        <div id="CreatePanel">
+            <h3>Please Register here...</h3>
+            <p>
+                <label>Username</label>
+                <input type="text" id="Text1" name="txtuser" />
+            </p>
+            <p>
+                <label>Password</label>
+                <input type="text" id="Text2" name="txtpassword" /> 
+            </p>
+            <p>
+                <button type="button">Submit</button>
+            </p>
+            <p>
+                If you have already Registered! Please <a href="#" id="loginlink">Login</a>
+            </p>
+
+
+        </div>
+			</section>
+
+			<section id="footer">
+
+			<footer>
+			&copy; Marlabs -2015
+			</footer>
+			</section>
+
+		</div>
+	</body>
+</html>
+
+
+
+==========================
+HTML DOM manipulation using jQuery 
+
+
+.html()
+.text()
+.append()
+.prepend()
+.after()
+.before()
+
+	these are used for HTML elements (div,section,p,span,or any html element)
+
+
+
+
+.val()
+	This is form and input type elements 
+
+
+
+syntax : -
+	$(selector).html();
+		It returns InnerHTML from the given element.
+
+
+	$(selector).html("new content");
+		It modifies the innerHTML to the given element with given  content.
+
+
+Example : DOM  manipulations
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="jquery-2.1.1.min.js"> </script>
+    <script>
+        $(document).ready(function () {
+            $(".container").append("<br/> <h3>jQuery Demos</h3>");
+        });
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <span>
+            Welcome HTML5 & Jquery
+        </span>
+    </div>
+</body>
+</html>
+==========================
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery Form manipulation</title>
+    <script src="jquery-2.1.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btnsubmit").click(function () {
+
+                var cname = $("#txtcname").val();
+                var cemail = $("#txtcemail").val();
+                var cmobile = $("#txtcmobile").val();
+
+
+                var str = "Hello..." + cname + " Your mail :" + cemail + " And Your contact is:" + cmobile;
+
+                $("#message").html("<b>" + str + "</b>");
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>Customer Form</h3>
+    <fieldset>
+        <legend>
+            Customer Info
+        </legend>
+        <p>
+            <label>Customer Name</label>
+            <input type="text" id="txtcname" /> 
+        </p>
+        <p>
+            <label>Email</label>
+            <input type="text" id="txtcemail" /> 
+        </p>
+
+        <p>
+            <label>Mobile</label>
+            <input type="text" id="txtcmobile" /> 
+        </p>
+
+        <p>
+            <button id="btnsubmit" type="button">Submit</button>
+        </p>
+     </fieldset>
+
+    <div>
+        <span id="message"></span>
+    </div>
+</body>
+</html>
+=====================================
+Atrribute manipulations 
+
+.atttr()
+
+	To set/get attribute to the given element
+
+syntax : -
+	$(selector).attr("attributename");
+		get the value of given attribute in the given element 
+
+
+	$("selector").attr("attributename","attributevalue");
+		set a new value to the given attribute with given value in the given element
+
+e.g.
+<a href="" id="a1">clikc me</a> 
+
+$("#a1").attr("href","http://www.google.com");
+
+
+
+===================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
