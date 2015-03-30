@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Admin App</title>
+    <script src="Libs/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" href="Content/styles.css" /> 
+    <script src="app/app.js"></script>
+
+    <script>
+        $(function () {
+            $("#aboutlink").click(function () {
+
+                $("#content").load("partials/about.html");
+            });
+
+            $("#contactlink").click(function () {
+                $("#content").load("partials/contacts.html");
+            });
+        });
+    </script>
+</head>
+<body>
+        <section id="wrapper">
+                <section id="header">
+                        <header>
+                            <h1>Hello..JavaScript</h1>
+                        </header>
+
+                       <nav id="topMenu">
+                           <ul >
+                               <li><a href="#" id="homelink">Home</a></li>
+                               <li><a href="#" id="contactlink">Contacts</a></li>
+                               <li><a href="#" id="aboutlink">About</a></li>
+                           </ul>
+                       </nav>
+                </section>
+
+                <section id="sidebar">
+                       <header>
+                            HTML Demos
+                       </header>
+                        <div>
+                                Ads goes...
+                        </div>
+                </section>
+
+
+                <section id="content">
+                    <header>
+                        User Form
+                    </header>
+
+                   <form id="userform" name="userform" onsubmit="return fnFormValidation()">
+                       <fieldset>
+                           <legend>
+                               User form
+                           </legend>
+
+                         <div>
+                             <label>Name</label>
+                             <input type="text" id="txtname" name="txtname" /> 
+                         </div>
+
+                        <div>
+                            <label>email</label>
+                            <input type="text" id="txtemail" name="txtemail" /> 
+                        </div>
+
+                        <div>
+                            <label>Mobile</label>
+                            <input type="text"  id="txtmobile" name="txtmobile" /> 
+                        </div>
+
+                        <div>
+                            <button type="submit" id="btnsubmit">Submit</button>
+                            &nbsp;
+                            &nbsp;
+                            <button type="reset">Reset</button>
+
+                        </div>
+
+
+                       </fieldset>
+                   </form>
+                </section>
+
+                <section id="footer">
+                    <footer>
+                        &copy; @Marlabs -2015
+                    </footer>
+                </section>
+        </section>
+    </body>
+
+</html>
