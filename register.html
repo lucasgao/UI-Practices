@@ -1,0 +1,37 @@
+<script>
+    $(document).ready(function () {
+        $("#btnRegister").click(function () {
+            var user = { id: 0, username: $("#txtusername").val(), password: $("#txtpassword").val(), email: $("#txtemail").val(), mobile: $("#txtmobile").val() };
+            WebAdminApp.UserModule.addUser(user);
+            alert("Succesfully Registerd!");
+           
+            $("#content").load("partials/login.html");
+        });
+    });
+</script>
+
+
+<div>
+    <form name="user-register-form">
+        <h3>Please Register here...</h3>
+        <p>
+            <label>Username</label>
+            <input type="text" id="txtusername" /> 
+        </p>
+        <p>
+            <label>Password</label>
+            <input type="password" id="txtpassword" /> 
+        </p>
+        <p>
+            <label>Email</label>
+            <input type="text" id="txtemail" /> 
+        </p>
+        <p>
+            <label>Mobile</label>
+            <input type="text" id="txtmobile" /> 
+        </p>
+        <p>
+            <input type="button" value="Register" id="btnRegister" /> 
+        </p>
+    </form>
+</div>
