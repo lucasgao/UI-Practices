@@ -1,11 +1,11 @@
   #wrapper {
                 width:960px;
-                margin:5px;
+                margin:10px;
             }
 
             #header {
 
-                width:900px;
+                width:920px;
                 padding:10px;
                 margin:5px;
 
@@ -74,4 +74,13 @@
                 font-weight:bold;
                 text-align:center;
                 font-family:Cambria;
+
+                
+                  padding:10px;
+                margin:5px;
+                background-color:#b5b5b5;
+
+                  border:2px solid green;
+                border-radius:5px;
+
             }
