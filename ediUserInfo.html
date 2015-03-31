@@ -1,0 +1,50 @@
+<script>
+    $(document).ready(function () {
+        var currentUser = WebAdminApp.UserModule.getUserByName(sessionStorage.username);
+
+        $("#txtusername").val(currentUser.username);
+        $("#txtpassword").val(currentUser.password);
+        $("#txtemail").val(currentUser.email);
+        $("#txtmobile").val(currentUser.mobile);
+
+        $("#btnUpdate").click(function () {
+
+            
+            var newUser = { id: currentUser.id, username: $("#txtusername").val(), password: $("#txtpassword").val(), email: $("#txtemail").val(), mobile: $("#txtmobile").val() };
+           
+
+            WebAdminApp.UserModule.updateUser(newUser);
+            alert("Succesfully Updated!");
+
+            $("#content").load("partials/userinfo.html");
+
+
+        });
+
+    });
+</script>
+
+<div id="loginform">
+    <form name="user-edit-form">
+        <h3>You can update your details  here...</h3>
+        <p>
+            <label>Username</label>
+            <input type="text" id="txtusername" readonly="true" /> 
+        </p>
+        <p>
+            <label>Password</label>
+            <input type="password" id="txtpassword"  readonly="true"/> 
+        </p>
+        <p>
+            <label>Email</label>
+            <input type="text" id="txtemail" /> 
+        </p>
+        <p>
+            <label>Mobile</label>
+            <input type="text" id="txtmobile" /> 
+        </p>
+        <p>
+            <input type="button" value="Update" id="btnUpdate" /> 
+        </p>
+    </form>
+</div>
