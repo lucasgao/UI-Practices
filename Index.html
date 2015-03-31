@@ -2,30 +2,29 @@
 <html>
 <head>
     <title>Web Admin App</title>
+
     <script src="Libs/jquery-2.1.1.min.js"></script>
     <link rel="stylesheet" href="Content/styles.css" /> 
     <script src="app/app.js"></script>
+    <script src="app/Scripts.js"></script>
 
-    <script>
-        $(function () {
-            $("#aboutlink").click(function () {
 
-                $("#content").load("partials/about.html");
-            });
-
-            $("#contactlink").click(function () {
-                $("#content").load("partials/contacts.html");
-            });
-        });
-    </script>
 </head>
 <body>
         <section id="wrapper">
                 <section id="header">
-                        <header>
-                            <h1>Hello..JavaScript</h1>
+                       <header>
+                            <h1>Web Administration Tool</h1>
                         </header>
 
+                       <div style="float:right;">
+                        <span id="anonymousUser">
+                            [Welcome Guest!][<a href="#" id="loginlink">Login</a>/<a href="#" id="registerlink">Register</a>]
+                        </span>
+                        <span id="loggedUser" style="display:none;">
+                            [Welcome <span id="userinfo"></span> !] [<a href="#" id="logoutlink">Logout</a>]
+                        </span>
+                    </div>
                        <nav id="topMenu">
                            <ul >
                                <li><a href="#" id="homelink">Home</a></li>
@@ -36,9 +35,16 @@
                 </section>
 
                 <section id="sidebar">
-                       <header>
-                            HTML Demos
-                       </header>
+
+                      <div id="afterloginlinks" style="display:none;">
+                          <a href="#" id="resetpassword">Reset Password</a>
+                          <br />
+                          <br />
+                          <a href="#" id="editinfo">Edit Info</a><br />
+                          <br />
+
+                      </div>
+
                         <div>
                                 Ads goes...
                         </div>
@@ -46,47 +52,13 @@
 
 
                 <section id="content">
-                    <header>
-                        User Form
-                    </header>
+                 
 
-                   <form id="userform" name="userform" onsubmit="return fnFormValidation()">
-                       <fieldset>
-                           <legend>
-                               User form
-                           </legend>
-
-                         <div>
-                             <label>Name</label>
-                             <input type="text" id="txtname" name="txtname" /> 
-                         </div>
-
-                        <div>
-                            <label>email</label>
-                            <input type="text" id="txtemail" name="txtemail" /> 
-                        </div>
-
-                        <div>
-                            <label>Mobile</label>
-                            <input type="text"  id="txtmobile" name="txtmobile" /> 
-                        </div>
-
-                        <div>
-                            <button type="submit" id="btnsubmit">Submit</button>
-                            &nbsp;
-                            &nbsp;
-                            <button type="reset">Reset</button>
-
-                        </div>
-
-
-                       </fieldset>
-                   </form>
                 </section>
 
                 <section id="footer">
                     <footer>
-                        &copy; @Marlabs -2015
+                        &copy;Marlabs -2015
                     </footer>
                 </section>
         </section>
